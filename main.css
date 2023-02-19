@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    max-width: 1200px;
+    padding: 5em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.caption::before {
+    content: "|";
+    margin-right: 3px;
+}
+
+.caption {
+    display: inline-block;
+    color: #888;
+    margin: 0;
+}
