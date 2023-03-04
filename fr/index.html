@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="../header.css">
     <link rel="stylesheet" href="../main.css">
     <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="../carousel.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
     <title>Me</title>
 </head>
 
@@ -18,6 +21,11 @@
         <nav>
             <div>
                 <ul>
+                    <li class="left">
+                        <a href="#">
+                            <span class="material-symbols-outlined">home</span>
+                        </a>
+                    </li>
                     <li>
                         <a href="#about">A propos</a>
                     </li>
@@ -28,17 +36,26 @@
                         <a href="#portfolio">Présentation</a>
                     </li>
                 </ul>
-                <div class="hamburg"></div>
+                <div class="hamburg">
+                    <span class="material-symbols-outlined">menu</span>
+                </div>
             </div>
             <div class="title">
                 <h1 id="me">Me</h1>
                 <p class="caption">
                     Une phrase pour vous décrire
                 </p>
+                <a id="scroller" href="#about">
+                    <span style="text-align: center;">SCROLL</span>
+                    <span class="material-symbols-outlined" style="text-align: center;">arrow_downward</span>
+                </a>
             </div>
         </nav>
         <script src="../header.js"></script>
     </header>
+    <div class="hide goup">
+        <a href="#"><span class="material-symbols-outlined">arrow_upward</span></a>
+    </div>
     <main>
         <h2 id="about">About</h2>
         <p>
@@ -61,6 +78,23 @@
         </p>
     </main>
     <footer>
+        <div id="left" class="links">
+            <a href="https://facebook.com/facebook" target="_blank" rel="noopener noreferrer">
+                <img src="../Images/Facebook.png" alt="Facebook logo">
+            </a>
+            <a href="https://twitter.com/twitter" target="_blank" rel="noopener noreferrer">
+                <img src="../Images/Twitter.png" alt="Twitter logo">
+            </a>
+            <a href="https://instagram.com/instagram/" target="_blank" rel="noopener noreferrer">
+                <img src="../Images/Instagram.png" alt="Instagram logo">
+            </a>
+            <a href="https://linkedin.com/company/linkedin" target="_blank" rel="noopener noreferrer">
+                <img src="../Images/LinkedIn.png" alt="LinkedIn logo">
+            </a>
+            <a href="https://github.com/github" target="_blank" rel="noopener noreferrer">
+                <img src="../Images/GitHub.png" alt="GitHub logo">
+            </a>
+        </div>
         <p>Copyright © 2023 Simon Pucheu</p>
     </footer>
 </body>

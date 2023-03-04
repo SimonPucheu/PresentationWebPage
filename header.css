@@ -1,7 +1,7 @@
-:root{
-    --height: 288px;
+:root {
     --top-nav-color: #000;
-    --top-nav-background-color: #00000000;
+    --top-nav-background-color: #00000030;
+    --top-caption-color: #444;
     --scroll-nav-color: #fff;
     --scroll-nav-background-color: #000000;
     --scroll-caption-color: #ccc;
@@ -9,28 +9,30 @@
 
 header {
     width: 100%;
-    height: var(--height);
+    height: 100vh;
     color: #fff;
     position: relative;
+    text-align: center;
+    z-index: 0;
+    background-color: #000;
 }
 
 header img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
     height: 100%;
+    max-width: 100%;
 }
 
 header nav {
+    top: 0;
+    left: 0;
     display: flex;
     flex-direction: column;
     position: fixed;
     width: 100%;
+    height: 100vh;
     transition-property: background-color, box-shadow;
     transition-duration: 500ms;
     background-color: var(--top-nav-background-color);
-    box-shadow: 0 10px 4em 0px var(--top-nav-color);
     color: var(--top-nav-color);
 }
 
@@ -44,16 +46,43 @@ header nav h1 {
     white-space: nowrap;
 }
 
+header nav .caption {
+    color: var(--top-caption-color);
+}
+
 header nav .caption,
 header nav h1 {
     transition-property: color, font-size;
     transition-duration: 500ms;
-    margin: 30px 0;
+    margin: 20px 0;
 }
 
 header nav .title {
     flex-direction: column;
     display: flex;
+    margin: auto 0;
+}
+
+header nav .title #scroller {
+    position: absolute;
+    width: 100%;
+    bottom: 20px;
+    font-size: 9px;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    justify-content: center;
+}
+
+header nav .title #scroller:hover {
+    transition: bottom 1000ms;
+    bottom: 10px;
+}
+
+header nav .title #scroller:hover .material-symbols-outlined {
+    transition: margin-top 1000ms;
+    margin-top: 10px;
 }
 
 header nav ul {
@@ -62,9 +91,17 @@ header nav ul {
     text-align: center;
     overflow: hidden;
     transition: max-height 1000ms;
+    position: relative;
+}
+
+header nav ul li.left {
+    position: absolute;
+    left: 0;
+    padding: 20px;
 }
 
 header nav.scroll {
+    height: initial;
     background-color: var(--scroll-nav-background-color);
     box-shadow: 0 10px 4em 0px var(--scroll-nav-color);
     color: var(--scroll-nav-color);
@@ -73,6 +110,10 @@ header nav.scroll {
 
 header nav.scroll .title {
     flex-direction: row;
+}
+
+header nav.scroll .title #scroller {
+    display: none;
 }
 
 header nav.scroll h1 {
@@ -157,22 +198,21 @@ header nav .logo .account table .logout {
 header nav .hamburg {
     display: none;
     float: right;
-    margin: 10px 26px;
-    padding: 10px 10px;
-    width: 24px;
-    height: 24px;
-    color: #fff;
-    font-weight: bold;
-    font-size: 26px;
-    cursor: pointer;
-    border-radius: 50%;
 }
 
-header nav .hamburg:hover {
+header nav .hamburg span {
+    margin: 10px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+
+}
+
+header nav .hamburg:hover span {
     background-color: #ccc;
 }
 
-@media(max-width: 500px) {
+@media(max-width: 800px) {
     header nav .hamburg {
         display: initial;
     }
@@ -188,5 +228,10 @@ header nav .hamburg:hover {
     header nav ul li {
         width: 100%;
         padding: 24px 0;
+    }
+
+    header nav ul li.left {
+        position: initial;
+        padding: 20px 40px;
     }
 }
