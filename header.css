@@ -64,7 +64,7 @@ header nav .title {
 }
 
 header nav .title .scroller {
-    margin: 0 50%;
+    margin: 0 calc(50% - 15.5px);
     position: absolute;
     bottom: 20px;
     font-size: 9px;
@@ -206,11 +206,6 @@ header nav .hamburg span {
     padding: 10px;
     cursor: pointer;
     border-radius: 50%;
-
-}
-
-header nav .hamburg:hover span {
-    background-color: #ccc;
 }
 
 @media(max-width: 800px) {
