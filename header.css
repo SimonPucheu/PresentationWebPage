@@ -1,6 +1,6 @@
 :root {
     --top-nav-color: #000;
-    --top-nav-background-color: #00000030;
+    --top-nav-background-color: transparent;
     --top-caption-color: #444;
     --scroll-nav-color: #fff;
     --scroll-nav-background-color: #000000;
@@ -30,7 +30,7 @@ header nav {
     position: fixed;
     width: 100%;
     height: 100vh;
-    transition-property: background-color, box-shadow;
+    transition-property: box-shadow;
     transition-duration: 500ms;
     background-color: var(--top-nav-background-color);
     color: var(--top-nav-color);

@@ -49,6 +49,11 @@ main h2 {
     margin-right: 3px;
 }
 
+.caption.both::after {
+    content: "|";
+    margin-left: 3px;
+}
+
 .caption {
     display: inline-block;
     color: #888;
