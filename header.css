@@ -120,12 +120,16 @@ header nav.scroll .title .scroller {
 header nav.scroll h1 {
     font-size: 20px;
     margin: 10px;
+    display: flex;
+    align-items: center;
 }
 
 header nav.scroll .caption {
     font-size: 15px;
     margin: 12.5px;
     color: var(--scroll-caption-color);
+    display: flex;
+    align-items: center;
 }
 
 header nav ul li {
